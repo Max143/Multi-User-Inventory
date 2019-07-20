@@ -1,0 +1,24 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+        create new account
+{% endblock title %}
+
+
+{% block body %}
+       
+    <div class="container mt-5">
+        <h2>Create A New Account</h2>
+        <hr>
+    <form method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <br><br>
+        <button type="submit">Create</button>
+    </form>
+
+
+
+
+{% endblock body %}
